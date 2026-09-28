@@ -1,5 +1,15 @@
 # ai
 
+## 5.0.270
+
+### Patch Changes
+
+- 06e8d1c: Encode chat IDs in default stream reconnection URLs so slashes, query delimiters, and fragments stay within the ID. Reject standalone `.` and `..` IDs before fetching. Custom URLs returned by `prepareReconnectToStreamRequest` remain unchanged.
+- 58d303f: Preserve prototype-named tools, providers, and provider metadata as own properties without changing lookup object prototypes. Prevent inherited names from resolving as registered providers or causing image metadata aggregation to fail.
+- 430ae0a: Prevent automatic chat resumption when completed tool output is followed by terminal text without a completed stream state, while preserving resumption after completed model text.
+- Updated dependencies [b6cf409]
+  - @ai-sdk/gateway@2.0.161
+
 ## 5.0.269
 
 ### Patch Changes
